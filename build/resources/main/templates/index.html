@@ -8,16 +8,90 @@
 <!-- Homepage Specific Elements -->
 <script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="scripts/list-control.js"></script>
 <!-- End Homepage Specific Elements -->
 </head>
 <body id="top">
-<div class="wrapper row1">
-  <div id="header" class="clear">
-    <div class="fl_left">
-      <h1><a href="index.html">Bloom's Taxonomy Verb Detection</a></h1>
-          <p th:text="'Hello, ' + ${name} + '! This will be a verb detector soon!'" />
-    </div>
-  </div>
-</div>
+	<div id="header">
+		<h1>Bloom's Taxonomy Verb Detection</h1>
+		<!--<p th:text="'Hello, ' + ${name} + '! This will be a verb detector soon!'" />-->
+	</div>
+	<div class="colmask threecol">
+		<div class="colmid">
+			<div class="colleft">
+				<div class="col1">
+					<!-- Column 1 start -->
+					<p>Document viewer goes here.</p>
+					<!-- Column 1 end -->
+				</div>
+				<div class="col2">
+					<!-- Column 2 start -->
+					<button type="submit">Upload Document</button>
+					<button type="submit">Store Result</button>
+					<!-- Column 2 end -->
+				</div>
+				<div class="col3">
+					<!-- Column 3 start -->
+					<div id="listContainer">
+			            <div class="listControl">
+			                <a id="expandList">Expand All</a>
+			                <a id="collapseList">Collapse All</a>
+			            </div>
+			            <ul id="expList">
+			                <li>
+			                    Creating
+			                    <ul>
+			                        <li>
+			                            Item 1.1
+			                        </li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    Evaluating
+			                    <ul>
+			                    	<li>
+			                    		Item 2.1
+			                    	</li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    Analysing
+			                    <ul>
+			                        <li>
+			                            Item 3.1
+			                        </li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    Applying
+			                    <ul>
+			                        <li>
+			                            Item 4.1
+			                        </li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    Understanding
+			                    <ul>
+			                        <li>
+			                            Item 5.1
+			                        </li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    Remembering
+			                    <ul>
+			                        <li>
+			                            Item 6.1
+			                        </li>
+			                    </ul>
+			                </li>
+			            </ul>
+			        </div>
+					<!-- Column 3 end -->
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
