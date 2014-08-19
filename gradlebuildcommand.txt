@@ -1,1 +1,1 @@
-./gradlew clean build && java -jar build/libs/blooms-taxonomy-verb-detection-0.2.jar
+./gradlew clean build && java -jar build/libs/blooms-taxonomy-verb-detection-0.3.jar
