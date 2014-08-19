@@ -3,6 +3,8 @@ package webapp;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,11 +28,14 @@ public class WebAppController {
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
+        		//PrintWriter writer = new PrintWriter(name, "UTF-8");
+                //writer.close();
+                String content = file.getContentType();
                 BufferedOutputStream stream = 
-                        new BufferedOutputStream(new FileOutputStream(new File(name + "-uploaded")));
+                        new BufferedOutputStream(new FileOutputStream(new File(name + "-uploaded"))); 
                 stream.write(bytes);
                 stream.close();
-                return "You successfully uploaded " + name + " into " + name + "-uploaded !";
+                return "You successfully uploaded " + name + " into " + name + "-uploaded !" + content;
             } catch (Exception e) {
                 return "You failed to upload " + name + " => " + e.getMessage();
             }
