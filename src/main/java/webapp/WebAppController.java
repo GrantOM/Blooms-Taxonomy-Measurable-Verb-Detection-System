@@ -3,11 +3,8 @@ package webapp;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.PrintWriter;
-import java.util.Scanner;
-
+import java.io.InputStream;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,14 +25,17 @@ public class WebAppController {
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
-        		//PrintWriter writer = new PrintWriter(name, "UTF-8");
-                //writer.close();
-                String content = file.getContentType();
+                int read = 0; 
+                InputStream inputStream = file.getInputStream(); 
+                //String content = file.getContentType();
+                String fileName = file.getOriginalFilename();
                 BufferedOutputStream stream = 
-                        new BufferedOutputStream(new FileOutputStream(new File(name + "-uploaded"))); 
-                stream.write(bytes);
+                        new BufferedOutputStream(new FileOutputStream(new File("uploadedfiles/" + fileName)));
+                while ((read = inputStream.read(bytes)) != -1) { 
+                	stream.write(bytes, 0, read);
+                }
                 stream.close();
-                return "You successfully uploaded " + name + " into " + name + "-uploaded !" + content;
+                return "You successfully uploaded " + name + " into " + name + "-uploaded !" + fileName;
             } catch (Exception e) {
                 return "You failed to upload " + name + " => " + e.getMessage();
             }
