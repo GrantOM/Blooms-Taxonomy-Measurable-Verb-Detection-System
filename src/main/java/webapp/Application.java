@@ -1,7 +1,6 @@
 package webapp;
 
 import javax.servlet.MultipartConfigElement;
-
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.embedded.MultipartConfigFactory;
 import org.springframework.boot.SpringApplication;
