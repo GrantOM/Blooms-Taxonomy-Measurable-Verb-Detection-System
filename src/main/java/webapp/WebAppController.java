@@ -24,11 +24,11 @@ public class WebAppController {
             @RequestParam("file") MultipartFile file){
         if (!file.isEmpty()) {
             try {
-            	int read = 0; 
                 byte[] bytes = file.getBytes();
+                int read = 0; 
+                InputStream inputStream = file.getInputStream(); 
                 String content = file.getContentType();
                 String fileName = file.getOriginalFilename();
-                InputStream inputStream = file.getInputStream(); 
                 BufferedOutputStream stream = 
                 		new BufferedOutputStream(new FileOutputStream(new File("uploadedfiles/" + fileName)));
                 while ((read = inputStream.read(bytes)) != -1) { 
@@ -42,6 +42,7 @@ public class WebAppController {
             }
         } else {
             return "You failed to upload " + name + " because the file was empty.";
+        }
     }   
 }  
 
