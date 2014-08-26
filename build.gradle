@@ -6,6 +6,9 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.5.RELEASE")
+        classpath("org.apache.tika:tika-core:1.5")
+        classpath("org.apache.tika:tika-parsers:1.5")
+        
     }
 }
 
@@ -27,6 +30,8 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.apache.tika:tika-core:1.5")
+    compile("org.apache.tika:tika-parsers:1.5")
     testCompile("junit:junit")
 }
 

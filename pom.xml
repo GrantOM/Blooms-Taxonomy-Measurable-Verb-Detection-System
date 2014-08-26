@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.springframework</groupId>
-    <artifactId>gs-serving-web-content</artifactId>
-    <version>0.1.0</version>
+    <artifactId>blooms-taxonomy-verb-detection</artifactId>
+    <version>0.3</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -16,12 +16,17 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>   
+	    <dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-core</artifactId>
+			<version>1.5</version>
+		</dependency>
     </dependencies>
 
     <properties>
-        <start-class>hello.Application</start-class>
+        <start-class>webapp.Application</start-class>
     </properties>
 
     <build>
