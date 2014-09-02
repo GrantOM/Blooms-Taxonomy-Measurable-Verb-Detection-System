@@ -1,13 +1,9 @@
 package webapp;
 
 import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
-import org.xml.sax.ContentHandler;
 
 @Controller
 public class WebAppController {
@@ -39,8 +34,9 @@ public class WebAppController {
     }*/
     
     @RequestMapping(value="/upload", method=RequestMethod.POST)
-    public @ResponseBody String handleFileUpload(@RequestParam("name") String name, 
+    public @ResponseBody SubmissionModel handleFileUpload(@RequestParam("name") String name,
             @RequestParam("file") MultipartFile file){
+        SubmissionModel submission = new SubmissionModel();
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
@@ -81,13 +77,16 @@ public class WebAppController {
                 br.close();
                 return "You successfully uploaded " + name + " into " + name + "-uploaded !" + fileName +
                 		fileText + "\n" + ch.toString();*/
-                return "Succesfully uploaded " + fileName + ": " + ch.toString();
+                submission.setContent(ch.toString());
+                return submission;
             } catch (Exception e) {
-                return "You failed to upload " + name + " => " + e.getMessage();
+                //return "You failed to upload " + name + " => " + e.getMessage();
+                return submission;
             }
         } else {
-            return "You failed to upload " + name + " because the file was empty.";
+            return submission;
         }
-    }   
-}  
+    }
+
+}
 
