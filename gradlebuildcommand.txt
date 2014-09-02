@@ -1,1 +1,3 @@
-./gradlew clean build && java -jar build/libs/blooms-taxonomy-verb-detection-0.3.jar
+First time build: ./gradlew clean cleanEclipseClasspath eclipseClasspath build && java -jar build/libs/blooms-taxonomy-verb-detection-0.3.jar
+
+Further builds: ./gradlew clean build && java -jar build/libs/blooms-taxonomy-verb-detection-0.3.jar
