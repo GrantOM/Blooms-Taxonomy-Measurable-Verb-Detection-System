@@ -1,5 +1,2 @@
-/webapp/
-/web/
-/templates/
-/static/
-/files/
+/static
+/webapp
