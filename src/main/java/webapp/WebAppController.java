@@ -1,8 +1,8 @@
 package webapp;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
+//import java.io.BufferedOutputStream;
+//import java.io.File;
+//import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +38,8 @@ public class WebAppController {
         SubmissionModel submission = new SubmissionModel();
         if (!file.isEmpty()) {
             try {
-                byte[] bytes = file.getBytes();
-                int read = 0; 
+                //byte[] bytes = file.getBytes();
+                //int read = 0; 
                 //String line = null;
                 
                 List<String> fileText = new ArrayList<String>();
@@ -60,14 +60,13 @@ public class WebAppController {
                     fileText.add(item + " -- " + metadata.get(item));
                 }
     
-                BufferedOutputStream stream = 
+                /*BufferedOutputStream stream = 
                 		new BufferedOutputStream(new FileOutputStream(new File("uploadedfiles/" + fileName)));
                 while ((read = inputStream.read(bytes)) != -1) { 
                 	stream.write(bytes, 0, read);               	
                 }
-                
                 stream.close();
-                inputStream.close();
+                inputStream.close();*/
 
                 /*BufferedReader br = new BufferedReader(new FileReader("uploadedfiles/" + fileName));
                 while ((line = br.readLine()) != null) {

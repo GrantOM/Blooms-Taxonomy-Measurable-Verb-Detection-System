@@ -34,23 +34,25 @@ import org.xml.sax.SAXException;
 
 public class TikaParser extends AbstractParser {
 
-        private static final Set<MediaType> SUPPORTED_TYPES = Collections.singleton(MediaType.application("hello"));
-        public static final String HELLO_MIME_TYPE = "application/hello";
-        
-        public Set<MediaType> getSupportedTypes(ParseContext context) {
-                return SUPPORTED_TYPES;
-        }
 
-        public void parse(
-                        InputStream stream, ContentHandler handler,
-                        Metadata metadata, ParseContext context)
-                        throws IOException, SAXException, TikaException {
+	private static final long serialVersionUID = -4219691302973751031L;
+	private static final Set<MediaType> SUPPORTED_TYPES = Collections.singleton(MediaType.application("hello"));
+    public static final String HELLO_MIME_TYPE = "application/hello";
+    
+    public Set<MediaType> getSupportedTypes(ParseContext context) {
+            return SUPPORTED_TYPES;
+    }
 
-                metadata.set(Metadata.CONTENT_TYPE, HELLO_MIME_TYPE);
-                metadata.set("Hello", "World");
+    public void parse(
+                    InputStream stream, ContentHandler handler,
+                    Metadata metadata, ParseContext context)
+                    throws IOException, SAXException, TikaException {
 
-                XHTMLContentHandler xhtml = new XHTMLContentHandler(handler, metadata);
-                xhtml.startDocument();
-                xhtml.endDocument();
+            metadata.set(Metadata.CONTENT_TYPE, HELLO_MIME_TYPE);
+            metadata.set("Hello", "World");
+
+            XHTMLContentHandler xhtml = new XHTMLContentHandler(handler, metadata);
+            xhtml.startDocument();
+            xhtml.endDocument();
         }
 }
