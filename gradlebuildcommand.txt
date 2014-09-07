@@ -1,3 +1,5 @@
 First time build: ./gradlew clean cleanEclipseClasspath eclipseClasspath build && java -jar build/libs/blooms-taxonomy-verb-detection-0.3.jar
 
 Further builds: ./gradlew clean build && java -jar build/libs/blooms-taxonomy-verb-detection-0.3.jar
+
+E:\University\Capstone\Blooms-Taxonomy-Measurable-Verb-Detection-System Newest.gradlew clean build && java -jar build/libs/blooms-taxonomy-verb-detection-0.3.jar

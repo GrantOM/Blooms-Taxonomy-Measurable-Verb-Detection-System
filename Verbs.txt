@@ -1,0 +1,22 @@
+creating	evaluating	analysing	applying	understanding	remembering
+create	judge	analyse	solve	explain	tell
+invent	select	distinguish	show	interpret	list
+compose	choose	examine	use	outline	describe
+predict	decide	compare	illustrate	discuss	relate
+plan	justify	contrast	construct	distinguish	locate
+construct	debate	investigate	complete	predict	write
+design	verify	categorise	examine	restate	find
+imagine	argue	identify	classify	translate	state
+propose	recommend	explain	choose	compare	name 
+devise	assess	separate	interpret	describe	identify
+formulate	discuss	advertise	make	relate	label
+combine	rate	take apart	put together	generalise	recall
+hypothesize	prioritise	differentiate	change	summarise	define
+originate	determine	subdivide	apply	put into your own words	recognise
+add to	critique	deduce	produce	paraphrase	match
+forecast	evaluate		translate	convert	reproduce
+	criticise		calculate	demonstrate	memorise
+	weigh		manipulate	visualise	draw
+	value		modify		select
+	estimate		put into practice		write
+	defend				recite

@@ -30,7 +30,7 @@ public class WebAppController {
     /*@RequestMapping(method=RequestMethod.GET)
     public @ResponseBody String retrieveText() {
         return "You can upload a file by posting to this same URL.";
-    }*/
+    }*/ 
     
     @RequestMapping(value="/upload", method=RequestMethod.POST)
     public @ResponseBody SubmissionModel handleFileUpload(@RequestParam("name") String name,

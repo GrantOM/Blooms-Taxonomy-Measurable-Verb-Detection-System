@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Bloom's Taxonomy Verb Detection</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="styles/layout.css" type="text/css" />
+<!-- Homepage Specific Elements -->
+<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.7.2.custom.min.js"></script>
+<script type="text/javascript" src="scripts/list-control.js"></script>
+<!-- End Homepage Specific Elements -->
+</head>
+<body id="top">
+	<div id="header">
+		<h1>Bloom's Taxonomy Verb Detection</h1>
+		<!--<p th:text="'Hello, ' + ${name} + '! This will be a verb detector soon!'" />-->
+	</div>
+	<div class="colmask threecol">
+		<div class="colmid">
+			<div class="colleft">
+				<div class="col1">
+					<!-- Column 1 start -->
+					<p name="doc"></p>
+					<!-- Column 1 end -->
+				</div>
+				<div class="col2">
+					<!-- Column 2 start -->
+					<form method="post" enctype="multipart/form-data" action="/upload">
+					File to upload: <input type="file" name="file"><br /> 
+					Name: <input type="text" name="name"><br /><br /> 
+					<input type="submit" value="Upload"> Press here to upload the file!
+					</form>
+					<!-- Column 2 end -->
+				</div>
+				<div class="col3">
+					<!-- Column 3 start -->
+					<div id="listContainer">
+			            <div class="listControl">
+			                <a id="expandList">Expand All</a>
+			                <a id="collapseList">Collapse All</a>
+			            </div>
+			            <ul id="expList">
+			                <li>
+			                    Creating
+			                    <ul>
+			                        <li>
+			                            Item 1.1
+			                        </li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    Evaluating
+			                    <ul>
+			                    	<li>
+			                    		Item 2.1
+			                    	</li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    Analysing
+			                    <ul>
+			                        <li>
+			                            Item 3.1
+			                        </li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    Applying
+			                    <ul>
+			                        <li>
+			                            Item 4.1
+			                        </li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    Understanding
+			                    <ul>
+			                        <li>
+			                            Item 5.1
+			                        </li>
+			                    </ul>
+			                </li>
+			                <li>
+			                    Remembering
+			                    <ul>
+			                        <li>
+			                            Item 6.1
+			                        </li>
+			                    </ul>
+			                </li>
+			            </ul>
+			            <input type="button" value="Search"> Click to search for verbs
+			        </div>
+					<!-- Column 3 end -->
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
