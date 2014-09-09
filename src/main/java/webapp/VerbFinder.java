@@ -94,7 +94,5 @@ public class VerbFinder {
     	}
     	
         return results;
-    }
-    
-    
+    } 
 }   

@@ -59,6 +59,9 @@ public class WebAppController {
                     String item = metadata.names()[i];
                     fileText.add(item + " -- " + metadata.get(item));
                 }
+                
+                VerbFinder verbs = new VerbFinder();
+                
     
                 /*BufferedOutputStream stream = 
                 		new BufferedOutputStream(new FileOutputStream(new File("uploadedfiles/" + fileName)));
@@ -75,7 +78,8 @@ public class WebAppController {
                 br.close();
                 return "You successfully uploaded " + name + " into " + name + "-uploaded !" + fileName +
                 		fileText + "\n" + ch.toString();*/
-                submission.setContent(ch.toString());
+                //submission.setContent(ch.toString());
+                submission.setContent(ch.toString() + verbs.findVerbs(ch.toString()).toString());
                 return submission;
             } catch (Exception e) {
                 //return "You failed to upload " + name + " => " + e.getMessage();
