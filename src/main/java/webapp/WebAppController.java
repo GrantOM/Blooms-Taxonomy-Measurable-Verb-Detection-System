@@ -47,7 +47,7 @@ public class WebAppController {
                 InputStream inputStream = file.getInputStream(); 
  
             	Metadata metadata = new Metadata();
-                BodyContentHandler ch = new BodyContentHandler();
+                BodyContentHandler ch = new BodyContentHandler(10*1024*1024);
             	AutoDetectParser parser = new AutoDetectParser();
             	
             	String mimeType = new Tika().detect(fileName);
@@ -83,9 +83,11 @@ public class WebAppController {
                 return submission;
             } catch (Exception e) {
                 //return "You failed to upload " + name + " => " + e.getMessage();
+            	submission.setContent(e.getMessage());
                 return submission;
             }
         } else {
+        	submission.setContent("file is empty");
             return submission;
         }
     }
