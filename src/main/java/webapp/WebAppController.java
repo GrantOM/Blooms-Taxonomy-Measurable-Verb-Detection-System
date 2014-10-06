@@ -79,7 +79,11 @@ public class WebAppController {
                 return "You successfully uploaded " + name + " into " + name + "-uploaded !" + fileName +
                 		fileText + "\n" + ch.toString();*/
                 //submission.setContent(ch.toString());
-                submission.setContent(ch.toString() + verbs.findVerbs(ch.toString()).toString());
+                
+                verbs.findVerbs(ch.toString());
+                verbs.findVerbs("Please list your mother, she likes to analyse you.");
+                
+                submission.setContent(ch.toString() + verbs.GetResults()[0].toString() + verbs.GetResults()[1].toString());
                 return submission;
             } catch (Exception e) {
                 //return "You failed to upload " + name + " => " + e.getMessage();

@@ -1,0 +1,1 @@
+{"applying":[],"analysing":[{"result":1,"verb":"analyse"}],"remembering":[{"result":1,"verb":"list"}],"creating":[],"understanding":[],"evaluating":[]}	
